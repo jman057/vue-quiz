@@ -69,5 +69,8 @@ export default{
   cursor:pointer;
 }
 
+.correct{
+  background-color:lightblue;
+}
 
 </style>
