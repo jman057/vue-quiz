@@ -13,6 +13,7 @@
         v-for="(answer, index) in answers"
         :key="index"
         @click="selectAnswer(index)"
+        :class="[selectedIndex === index ? correct : incorrect ]"
         >
            {{answer}}
          </b-list-group-item>
@@ -68,6 +69,13 @@ export default{
   background-color: #eeeeee;
   cursor:pointer;
 }
-
-
+.selected{
+  background-color:lightblue;
+}
+.corect{
+  background-color:green;
+}
+.incorrect{
+  background-color:red;
+}
 </style>
