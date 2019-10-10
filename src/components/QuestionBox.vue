@@ -13,13 +13,8 @@
         v-for="(answer, index) in answers"
         :key="index"
         @click="selectAnswer(index)"
-<<<<<<< HEAD
-        :class="[selectedIndex === index ? correct : incorrect ]"
-=======
         :class="[selectedIndex === index ? 'selected' : '']"
->>>>>>> 151d4bc5e67a217bb9b620bb36cd814382777045
-        >
-           {{answer}}
+>           {{answer}}
          </b-list-group-item>
 
       </b-list-group>
@@ -89,26 +84,16 @@ export default{
   background-color: #eeeeee;
   cursor:pointer;
 }
-<<<<<<< HEAD
-.selected{
-  background-color:lightblue;
-}
-.corect{
-=======
 
 .selected{
   background-color:lightblue;
 }
+
 .correct{
->>>>>>> 151d4bc5e67a217bb9b620bb36cd814382777045
   background-color:green;
 }
 .incorrect{
   background-color:red;
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 151d4bc5e67a217bb9b620bb36cd814382777045
 </style>
