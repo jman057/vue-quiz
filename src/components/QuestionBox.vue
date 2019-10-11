@@ -48,7 +48,7 @@ export default{
     return {
       selectedIndex: null,
       shuffledAnswers: [],
-      correctIndex: null
+
     }
   },
   computed:{
@@ -56,8 +56,11 @@ export default{
       let answers = [...this.currentQuestion.incorrect_answers]
       answers.push(this.currentQuestion.correct_answer)
       answers = _.shuffle(answers)
-      this.correctIndex = answers.indexOf(this.currentQuestion.correct_answer)
+
       return answers
+    },
+    correctIndex () {
+      return this.answers.indexOf(this.currentQuestion.correct_answer)
     }
   },
 
@@ -72,7 +75,7 @@ export default{
          isCorrect = true;
        }
        this.increment(isCorrect)
-       this.selectedIndex = null
+      
 
     },
   }
